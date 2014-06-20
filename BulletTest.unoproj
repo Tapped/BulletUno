@@ -3,12 +3,17 @@
   <References>
     <PackageReference Name="Uno.Content.Utilities" />
     <PackageReference Name="Uno.Scenes" />
-    <PackageReference Name="Uno.Tweening" />
+    <PackageReference Name="Uno.UI" Version="0.1.0.0" />
   </References>
   <Files>
+    <SourceFile Path="UnoSource/Box.uno" />
+    <SourceFile Path="UnoSource/BoxShape.uno" />
+    <SourceFile Path="UnoSource/Matrix.uno" />
+    <SourceFile Path="UnoSource/RigidBody.uno" />
     <SourceFile Path="UnoSource/Vector3.uno" />
     <SourceFile Path="UnoSource/World.uno" />
     <SourceFile Path="App.uno" />
+    <SourceFile Path="main.ux.uno" />
     <ExtensionFile Path="Bullet.cli.uxl" />
   </Files>
 </Project>

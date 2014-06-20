@@ -1,54 +1,53 @@
 using Uno.Compiler.ExportTargetInterop;
 
-namespace Experimental_Bullet
-{	
+namespace Experimental.Bullet
+{
 	[TargetSpecificType]
-	public class Vector3Handler {}
-	
+	public class Vector3Handle {}
+
 	[TargetSpecificImplementation]
-	public static class Vector3Impl
+	static class Vector3Impl
 	{
 		[TargetSpecificImplementation]
-		public static Vector3Handler Create(float x, float y, float z);
-		
+		public static extern Vector3Handle Create(float x, float y, float z);
+
 		[TargetSpecificImplementation]
-		public static float GetX(Vector3Handler handler);
-		
+		public static extern float GetX(Vector3Handle handler);
+
 		[TargetSpecificImplementation]
-		public static float GetY(Vector3Handler handler);
-		
+		public static extern float GetY(Vector3Handle handler);
+
 		[TargetSpecificImplementation]
-		public static float GetZ(Vector3Handler handler);
+		public static extern float GetZ(Vector3Handle handler);
 	}
-	
+
 	public class Vector3
 	{
-		Vector3Handler instance;
-		
+		public Vector3Handle handle;
+
 		public Vector3()
 		{
-			instance = Vector3Impl.Create(0, 0, 0);
+			handle = Vector3Impl.Create(0, 0, 0);
 		}
-		
-		public Vector3(Vector3Handler handler)
+
+		public Vector3(Vector3Handle handler)
 		{
-			instance = handler;
+			handle = handler;
 		}
 
 		public Vector3(float3 a)
 		{
-			instance = Vector3Impl.Create(a.X, a.Y, a.Z);
+			handle = Vector3Impl.Create(a.X, a.Y, a.Z);
 		}
-		
+
 		public void Set(float3 a)
 		{
-			instance = Vector3Impl.Create(a.X, a.Y, a.Z);
+			handle = Vector3Impl.Create(a.X, a.Y, a.Z);
 		}
-		
+
 		public float3 Get()
 		{
-			if(instance != null)
-			return float3(Vector3Impl.GetX(instance), Vector3Impl.GetY(instance), Vector3Impl.GetZ(instance));
+			return float3(Vector3Impl.GetX(handle), Vector3Impl.GetY(handle), Vector3Impl.GetZ(handle));
 		}
 	}
 }

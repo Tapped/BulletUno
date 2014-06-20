@@ -3,41 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BulletSharp;
 
-namespace BulletUno
+namespace Experimental.Bullet
 {
-    public class Vector3Handler
+    public class Vector3Handle
     {
-        public float X, Y, Z;
-
-        public Vector3Handler(float x, float y, float z)
+        public Vector3 handle;
+        public Vector3Handle(float x, float y, float z)
         {
-            X = x;
-            Y = y;
-            Z = z;
+            handle = new Vector3(x, y, z);
         }
     }
 
     public static class Vector3Impl
     {
-        public static Vector3Handler Create(float x, float y, float z)
+        public static Vector3Handle Create(float x, float y, float z)
         {
-            return new Vector3Handler(x, y, z);
+            return new Vector3Handle(x, y, z);
         }
 
-        public static float GetX(Vector3Handler handler)
+        public static float GetX(Vector3Handle handler)
         {
-            return handler.X;
+            return handler.handle.X;
         }
 
-        public static float GetY(Vector3Handler handler)
+        public static float GetY(Vector3Handle handler)
         {
-            return handler.Y;
+            return handler.handle.Y;
         }
 
-        public static float GetZ(Vector3Handler handler)
+        public static float GetZ(Vector3Handle handler)
         {
-            return handler.Z;
+            return handler.handle.Z;
         }
     }
 }

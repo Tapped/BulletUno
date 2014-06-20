@@ -7,7 +7,7 @@
     <ProjectGuid>{504CD67C-57AE-420A-A82E-21E70910A80B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BulletUno</RootNamespace>
+    <RootNamespace>Experimental.Bullet</RootNamespace>
     <AssemblyName>BulletUno</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BulletSharp">
+    <Reference Include="BulletSharp, Version=2.82.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dlls\BulletSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -42,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoxShapeImpl.cs" />
+    <Compile Include="MatrixImpl.cs" />
+    <Compile Include="RigidBodyImpl.cs" />
     <Compile Include="Vector3Impl.cs" />
     <Compile Include="WorldImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
