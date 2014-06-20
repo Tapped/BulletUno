@@ -6,6 +6,8 @@
     <PackageReference Name="Uno.Tweening" />
   </References>
   <Files>
+    <SourceFile Path="UnoSource/Vector3.uno" />
+    <SourceFile Path="UnoSource/World.uno" />
     <SourceFile Path="App.uno" />
     <ExtensionFile Path="Bullet.cli.uxl" />
   </Files>
