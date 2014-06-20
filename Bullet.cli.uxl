@@ -1,0 +1,6 @@
+<ExportBindings TargetBackend="CIL">
+
+	<TargetElement Type="AssemblyReference" Value="Dlls/BulletSharp.dll" />
+	<TargetElement Type="AssemblyReference" Value="Dlls/BulletUno.dll" />
+	
+</ExportBindings>

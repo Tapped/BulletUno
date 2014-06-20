@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project>
+  <References>
+    <PackageReference Name="Uno.Content.Utilities" />
+    <PackageReference Name="Uno.Scenes" />
+    <PackageReference Name="Uno.Tweening" />
+  </References>
+  <Files>
+    <SourceFile Path="App.uno" />
+    <ExtensionFile Path="Bullet.cli.uxl" />
+  </Files>
+</Project>
