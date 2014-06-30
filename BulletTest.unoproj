@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project>
   <References>
+    <PackageReference Name="Uno.Drawing.Primitives" />
     <PackageReference Name="Uno.Content.Utilities" />
     <PackageReference Name="Uno.Scenes" />
     <PackageReference Name="Uno.UI" Version="0.1.0.0" />
@@ -13,7 +14,6 @@
     <SourceFile Path="UnoSource/Vector3.uno" />
     <SourceFile Path="UnoSource/World.uno" />
     <SourceFile Path="App.uno" />
-    <SourceFile Path="main.ux.uno" />
     <ExtensionFile Path="Bullet.cli.uxl" />
   </Files>
 </Project>
